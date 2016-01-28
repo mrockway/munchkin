@@ -10,22 +10,38 @@ import UIKit
 
 class SecondViewController: UIViewController {
     
-    var dueDate = NSDate()
+    var dueDate: String = ""
     @IBOutlet weak var dueDateLabel: UILabel!
+    @IBOutlet weak var setDateButton: UIButton!
     @IBOutlet weak var dueDateSelector: UIDatePicker!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        dueDateSelector.addTarget(self, action: Selector("datePickerChanged:"), forControlEvents: UIControlEvents.ValueChanged)
-        
+        // dueDateSelector.addTarget(self, action: Selector("datePickerChanged:"), forControlEvents: UIControlEvents.ValueChanged)
+        dueDateSelector.hidden = true
+        if(dueDate == "") {
+            setDateButton.hidden = false
+            dueDateLabel.hidden = true
+        }
         
         // Do any additional setup after loading the view.
     }
-
+    
+    @IBAction func setInitialDate() {
+        dueDateSelector.hidden = false
+        dueDateSelector.addTarget(self, action: Selector("datePickerChanged:"), forControlEvents: UIControlEvents.ValueChanged)
+        dueDateLabel.hidden = false
+        setDateButton.hidden = true
+    }
+    
     
     func datePickerChanged(datePicker:UIDatePicker) {
-        dueDate = datePicker.date
-        
+        var dueDateFromPicker = NSDate()
+        setDateButton.hidden = true
+        let formatter = NSDateFormatter()
+        formatter.dateStyle = NSDateFormatterStyle.LongStyle
+        dueDateFromPicker = datePicker.date
+        dueDate = formatter.stringFromDate(dueDateFromPicker)
         dueDateLabel.text = "Due Date: \(dueDate)"
     }
     
