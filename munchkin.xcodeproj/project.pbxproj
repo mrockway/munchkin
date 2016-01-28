@@ -1,0 +1,505 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BAE763811C59FAC600CAB4B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE763801C59FAC600CAB4B0 /* AppDelegate.swift */; };
+		BAE763831C59FAC600CAB4B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE763821C59FAC600CAB4B0 /* ViewController.swift */; };
+		BAE763861C59FAC600CAB4B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAE763841C59FAC600CAB4B0 /* Main.storyboard */; };
+		BAE763881C59FAC600CAB4B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAE763871C59FAC600CAB4B0 /* Assets.xcassets */; };
+		BAE7638B1C59FAC600CAB4B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAE763891C59FAC600CAB4B0 /* LaunchScreen.storyboard */; };
+		BAE763961C59FAC600CAB4B0 /* munchkinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE763951C59FAC600CAB4B0 /* munchkinTests.swift */; };
+		BAE763A11C59FAC600CAB4B0 /* munchkinUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE763A01C59FAC600CAB4B0 /* munchkinUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BAE763921C59FAC600CAB4B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BAE763751C59FAC600CAB4B0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BAE7637C1C59FAC600CAB4B0;
+			remoteInfo = munchkin;
+		};
+		BAE7639D1C59FAC600CAB4B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BAE763751C59FAC600CAB4B0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BAE7637C1C59FAC600CAB4B0;
+			remoteInfo = munchkin;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BAE7637D1C59FAC600CAB4B0 /* munchkin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = munchkin.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAE763801C59FAC600CAB4B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BAE763821C59FAC600CAB4B0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BAE763851C59FAC600CAB4B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BAE763871C59FAC600CAB4B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BAE7638A1C59FAC600CAB4B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BAE7638C1C59FAC600CAB4B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BAE763911C59FAC600CAB4B0 /* munchkinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = munchkinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAE763951C59FAC600CAB4B0 /* munchkinTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = munchkinTests.swift; sourceTree = "<group>"; };
+		BAE763971C59FAC600CAB4B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BAE7639C1C59FAC600CAB4B0 /* munchkinUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = munchkinUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAE763A01C59FAC600CAB4B0 /* munchkinUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = munchkinUITests.swift; sourceTree = "<group>"; };
+		BAE763A21C59FAC600CAB4B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BAE7637A1C59FAC600CAB4B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAE7638E1C59FAC600CAB4B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAE763991C59FAC600CAB4B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BAE763741C59FAC600CAB4B0 = {
+			isa = PBXGroup;
+			children = (
+				BAE7637F1C59FAC600CAB4B0 /* munchkin */,
+				BAE763941C59FAC600CAB4B0 /* munchkinTests */,
+				BAE7639F1C59FAC600CAB4B0 /* munchkinUITests */,
+				BAE7637E1C59FAC600CAB4B0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BAE7637E1C59FAC600CAB4B0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BAE7637D1C59FAC600CAB4B0 /* munchkin.app */,
+				BAE763911C59FAC600CAB4B0 /* munchkinTests.xctest */,
+				BAE7639C1C59FAC600CAB4B0 /* munchkinUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BAE7637F1C59FAC600CAB4B0 /* munchkin */ = {
+			isa = PBXGroup;
+			children = (
+				BAE763801C59FAC600CAB4B0 /* AppDelegate.swift */,
+				BAE763821C59FAC600CAB4B0 /* ViewController.swift */,
+				BAE763841C59FAC600CAB4B0 /* Main.storyboard */,
+				BAE763871C59FAC600CAB4B0 /* Assets.xcassets */,
+				BAE763891C59FAC600CAB4B0 /* LaunchScreen.storyboard */,
+				BAE7638C1C59FAC600CAB4B0 /* Info.plist */,
+			);
+			path = munchkin;
+			sourceTree = "<group>";
+		};
+		BAE763941C59FAC600CAB4B0 /* munchkinTests */ = {
+			isa = PBXGroup;
+			children = (
+				BAE763951C59FAC600CAB4B0 /* munchkinTests.swift */,
+				BAE763971C59FAC600CAB4B0 /* Info.plist */,
+			);
+			path = munchkinTests;
+			sourceTree = "<group>";
+		};
+		BAE7639F1C59FAC600CAB4B0 /* munchkinUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BAE763A01C59FAC600CAB4B0 /* munchkinUITests.swift */,
+				BAE763A21C59FAC600CAB4B0 /* Info.plist */,
+			);
+			path = munchkinUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BAE7637C1C59FAC600CAB4B0 /* munchkin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BAE763A51C59FAC600CAB4B0 /* Build configuration list for PBXNativeTarget "munchkin" */;
+			buildPhases = (
+				BAE763791C59FAC600CAB4B0 /* Sources */,
+				BAE7637A1C59FAC600CAB4B0 /* Frameworks */,
+				BAE7637B1C59FAC600CAB4B0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = munchkin;
+			productName = munchkin;
+			productReference = BAE7637D1C59FAC600CAB4B0 /* munchkin.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BAE763901C59FAC600CAB4B0 /* munchkinTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BAE763A81C59FAC600CAB4B0 /* Build configuration list for PBXNativeTarget "munchkinTests" */;
+			buildPhases = (
+				BAE7638D1C59FAC600CAB4B0 /* Sources */,
+				BAE7638E1C59FAC600CAB4B0 /* Frameworks */,
+				BAE7638F1C59FAC600CAB4B0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BAE763931C59FAC600CAB4B0 /* PBXTargetDependency */,
+			);
+			name = munchkinTests;
+			productName = munchkinTests;
+			productReference = BAE763911C59FAC600CAB4B0 /* munchkinTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BAE7639B1C59FAC600CAB4B0 /* munchkinUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BAE763AB1C59FAC600CAB4B0 /* Build configuration list for PBXNativeTarget "munchkinUITests" */;
+			buildPhases = (
+				BAE763981C59FAC600CAB4B0 /* Sources */,
+				BAE763991C59FAC600CAB4B0 /* Frameworks */,
+				BAE7639A1C59FAC600CAB4B0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BAE7639E1C59FAC600CAB4B0 /* PBXTargetDependency */,
+			);
+			name = munchkinUITests;
+			productName = munchkinUITests;
+			productReference = BAE7639C1C59FAC600CAB4B0 /* munchkinUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BAE763751C59FAC600CAB4B0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = rockway;
+				TargetAttributes = {
+					BAE7637C1C59FAC600CAB4B0 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					BAE763901C59FAC600CAB4B0 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = BAE7637C1C59FAC600CAB4B0;
+					};
+					BAE7639B1C59FAC600CAB4B0 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = BAE7637C1C59FAC600CAB4B0;
+					};
+				};
+			};
+			buildConfigurationList = BAE763781C59FAC600CAB4B0 /* Build configuration list for PBXProject "munchkin" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BAE763741C59FAC600CAB4B0;
+			productRefGroup = BAE7637E1C59FAC600CAB4B0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BAE7637C1C59FAC600CAB4B0 /* munchkin */,
+				BAE763901C59FAC600CAB4B0 /* munchkinTests */,
+				BAE7639B1C59FAC600CAB4B0 /* munchkinUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BAE7637B1C59FAC600CAB4B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAE7638B1C59FAC600CAB4B0 /* LaunchScreen.storyboard in Resources */,
+				BAE763881C59FAC600CAB4B0 /* Assets.xcassets in Resources */,
+				BAE763861C59FAC600CAB4B0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAE7638F1C59FAC600CAB4B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAE7639A1C59FAC600CAB4B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BAE763791C59FAC600CAB4B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAE763831C59FAC600CAB4B0 /* ViewController.swift in Sources */,
+				BAE763811C59FAC600CAB4B0 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAE7638D1C59FAC600CAB4B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAE763961C59FAC600CAB4B0 /* munchkinTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAE763981C59FAC600CAB4B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAE763A11C59FAC600CAB4B0 /* munchkinUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BAE763931C59FAC600CAB4B0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BAE7637C1C59FAC600CAB4B0 /* munchkin */;
+			targetProxy = BAE763921C59FAC600CAB4B0 /* PBXContainerItemProxy */;
+		};
+		BAE7639E1C59FAC600CAB4B0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BAE7637C1C59FAC600CAB4B0 /* munchkin */;
+			targetProxy = BAE7639D1C59FAC600CAB4B0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BAE763841C59FAC600CAB4B0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BAE763851C59FAC600CAB4B0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BAE763891C59FAC600CAB4B0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BAE7638A1C59FAC600CAB4B0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BAE763A31C59FAC600CAB4B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BAE763A41C59FAC600CAB4B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BAE763A61C59FAC600CAB4B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = munchkin/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rockway.munchkin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BAE763A71C59FAC600CAB4B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = munchkin/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rockway.munchkin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		BAE763A91C59FAC600CAB4B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = munchkinTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rockway.munchkinTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/munchkin.app/munchkin";
+			};
+			name = Debug;
+		};
+		BAE763AA1C59FAC600CAB4B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = munchkinTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rockway.munchkinTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/munchkin.app/munchkin";
+			};
+			name = Release;
+		};
+		BAE763AC1C59FAC600CAB4B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = munchkinUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rockway.munchkinUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = munchkin;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		BAE763AD1C59FAC600CAB4B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = munchkinUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rockway.munchkinUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = munchkin;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BAE763781C59FAC600CAB4B0 /* Build configuration list for PBXProject "munchkin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAE763A31C59FAC600CAB4B0 /* Debug */,
+				BAE763A41C59FAC600CAB4B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BAE763A51C59FAC600CAB4B0 /* Build configuration list for PBXNativeTarget "munchkin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAE763A61C59FAC600CAB4B0 /* Debug */,
+				BAE763A71C59FAC600CAB4B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BAE763A81C59FAC600CAB4B0 /* Build configuration list for PBXNativeTarget "munchkinTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAE763A91C59FAC600CAB4B0 /* Debug */,
+				BAE763AA1C59FAC600CAB4B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BAE763AB1C59FAC600CAB4B0 /* Build configuration list for PBXNativeTarget "munchkinUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAE763AC1C59FAC600CAB4B0 /* Debug */,
+				BAE763AD1C59FAC600CAB4B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BAE763751C59FAC600CAB4B0 /* Project object */;
+}
