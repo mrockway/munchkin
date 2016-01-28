@@ -14,6 +14,7 @@
 		BAE7638B1C59FAC600CAB4B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAE763891C59FAC600CAB4B0 /* LaunchScreen.storyboard */; };
 		BAE763961C59FAC600CAB4B0 /* munchkinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE763951C59FAC600CAB4B0 /* munchkinTests.swift */; };
 		BAE763A11C59FAC600CAB4B0 /* munchkinUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE763A01C59FAC600CAB4B0 /* munchkinUITests.swift */; };
+		BAE763AF1C5AA67800CAB4B0 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE763AE1C5AA67800CAB4B0 /* SecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		BAE7639C1C59FAC600CAB4B0 /* munchkinUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = munchkinUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAE763A01C59FAC600CAB4B0 /* munchkinUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = munchkinUITests.swift; sourceTree = "<group>"; };
 		BAE763A21C59FAC600CAB4B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BAE763AE1C5AA67800CAB4B0 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				BAE763801C59FAC600CAB4B0 /* AppDelegate.swift */,
 				BAE763821C59FAC600CAB4B0 /* ViewController.swift */,
+				BAE763AE1C5AA67800CAB4B0 /* SecondViewController.swift */,
 				BAE763841C59FAC600CAB4B0 /* Main.storyboard */,
 				BAE763871C59FAC600CAB4B0 /* Assets.xcassets */,
 				BAE763891C59FAC600CAB4B0 /* LaunchScreen.storyboard */,
@@ -256,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAE763AF1C5AA67800CAB4B0 /* SecondViewController.swift in Sources */,
 				BAE763831C59FAC600CAB4B0 /* ViewController.swift in Sources */,
 				BAE763811C59FAC600CAB4B0 /* AppDelegate.swift in Sources */,
 			);
@@ -482,6 +486,7 @@
 				BAE763A71C59FAC600CAB4B0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BAE763A81C59FAC600CAB4B0 /* Build configuration list for PBXNativeTarget "munchkinTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +495,7 @@
 				BAE763AA1C59FAC600CAB4B0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BAE763AB1C59FAC600CAB4B0 /* Build configuration list for PBXNativeTarget "munchkinUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +504,7 @@
 				BAE763AD1C59FAC600CAB4B0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
