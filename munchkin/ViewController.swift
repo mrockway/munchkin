@@ -9,11 +9,14 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
+    func setDate() {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        if let dueDate = defaults.stringForKey("DueDate") {
+            print(dueDate)
+        }
+    }
     @IBAction func buttonPressed()  {
-        NSLog("Button Pressed")
-        let now = NSDate()
-        print (now)
+        
     }
     
     override func viewDidLoad() {
