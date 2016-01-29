@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA70255F1C5ADFC400883644 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA70255E1C5ADFC400883644 /* ImageViewController.swift */; };
 		BAE763811C59FAC600CAB4B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE763801C59FAC600CAB4B0 /* AppDelegate.swift */; };
 		BAE763831C59FAC600CAB4B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE763821C59FAC600CAB4B0 /* ViewController.swift */; };
 		BAE763861C59FAC600CAB4B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAE763841C59FAC600CAB4B0 /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BA70255E1C5ADFC400883644 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		BAE7637D1C59FAC600CAB4B0 /* munchkin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = munchkin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAE763801C59FAC600CAB4B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BAE763821C59FAC600CAB4B0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				BAE763821C59FAC600CAB4B0 /* ViewController.swift */,
 				BAE763AE1C5AA67800CAB4B0 /* SecondViewController.swift */,
 				BAE763841C59FAC600CAB4B0 /* Main.storyboard */,
+				BA70255E1C5ADFC400883644 /* ImageViewController.swift */,
 				BAE763871C59FAC600CAB4B0 /* Assets.xcassets */,
 				BAE763891C59FAC600CAB4B0 /* LaunchScreen.storyboard */,
 				BAE7638C1C59FAC600CAB4B0 /* Info.plist */,
@@ -261,6 +264,7 @@
 			files = (
 				BAE763AF1C5AA67800CAB4B0 /* SecondViewController.swift in Sources */,
 				BAE763831C59FAC600CAB4B0 /* ViewController.swift in Sources */,
+				BA70255F1C5ADFC400883644 /* ImageViewController.swift in Sources */,
 				BAE763811C59FAC600CAB4B0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -405,6 +409,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rockway.munchkin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -416,6 +421,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rockway.munchkin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

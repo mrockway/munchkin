@@ -15,14 +15,16 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var setDateButton: UIButton!
     @IBOutlet weak var dueDateSelector: UIDatePicker!
     
+    @IBOutlet weak var confirmDateButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // dueDateSelector.addTarget(self, action: Selector("datePickerChanged:"), forControlEvents: UIControlEvents.ValueChanged)
         dueDateSelector.hidden = true
-        if(dueDate == "") {
-            setDateButton.hidden = false
-            dueDateLabel.hidden = true
-        }
+        confirmDateButton.hidden = true
+        setDateButton.hidden = false
+        dueDateLabel.hidden = true
+        
         
         // Do any additional setup after loading the view.
     }
@@ -32,9 +34,10 @@ class SecondViewController: UIViewController {
         dueDateSelector.addTarget(self, action: Selector("datePickerChanged:"), forControlEvents: UIControlEvents.ValueChanged)
         dueDateLabel.hidden = false
         setDateButton.hidden = true
+        confirmDateButton.hidden = false
     }
     
-    
+    // Set the due date 
     func datePickerChanged(datePicker:UIDatePicker) {
         var dueDateFromPicker = NSDate()
         setDateButton.hidden = true
@@ -43,6 +46,14 @@ class SecondViewController: UIViewController {
         dueDateFromPicker = datePicker.date
         dueDate = formatter.stringFromDate(dueDateFromPicker)
         dueDateLabel.text = "Due Date: \(dueDate)"
+    }
+    
+    @IBAction func confirmDueDate() {
+        dueDateSelector.hidden = true
+        confirmDateButton.hidden = true
+        
+        // add segue for moving to next weekly size screen
+        
     }
     
     override func didReceiveMemoryWarning() {
