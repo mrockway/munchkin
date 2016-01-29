@@ -13,11 +13,15 @@ import UIKit
 
 
 class ImageViewController: UIViewController {
-    func setDate() {
+    
+    func findWeek() {
+        let today = NSDate()
         let defaults = NSUserDefaults.standardUserDefaults()
-        if let dueDate = defaults.stringForKey("DueDate") {
-            print("image screen \(dueDate)")
-        }
+        let dueDate = defaults.objectForKey("DueDate")
+        print("due date from storage \(dueDate)")
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "yyyy/MM/dd"
+        print((dueDate!.timeIntervalSinceDate(today))/86400)
     }
     
     let data = [(week: 1, weight: "8lbs", length: "20in"), (week: 2, weight: "223b", length: "20ins")]
@@ -25,8 +29,8 @@ class ImageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setDate()
-        print("data is \(data[0].week)")
+        findWeek()
+        print("data is \(data[1].week)")
                 // Do any additional setup after loading the view.
     }
 

@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     func setDate() {
         let defaults = NSUserDefaults.standardUserDefaults()
         if let dueDate = defaults.stringForKey("DueDate") {
-            print(dueDate)
+            print("date from str \(dueDate)")
         }
     }
     @IBAction func buttonPressed()  {
