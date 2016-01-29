@@ -10,7 +10,9 @@ import UIKit
 
 class SecondViewController: UIViewController {
     
+    let defaults = NSUserDefaults.standardUserDefaults()
     var dueDate: String = ""
+    var dueDateFromPicker = NSDate()
     @IBOutlet weak var dueDateLabel: UILabel!
     @IBOutlet weak var setDateButton: UIButton!
     @IBOutlet weak var dueDateSelector: UIDatePicker!
@@ -38,14 +40,17 @@ class SecondViewController: UIViewController {
     
     // Set the due date 
     func datePickerChanged(datePicker:UIDatePicker) {
+        let today = NSDate()
         datePicker.minimumDate = NSDate()
-        var dueDateFromPicker = NSDate()
         setDateButton.hidden = true
         let formatter = NSDateFormatter()
         formatter.dateStyle = NSDateFormatterStyle.LongStyle
         dueDateFromPicker = datePicker.date
+        print("due date from picker \(dueDateFromPicker)")
+        print(dueDateFromPicker.timeIntervalSinceDate(today))
         dueDate = formatter.stringFromDate(dueDateFromPicker)
         dueDateLabel.text = "Due Date: \(dueDate)"
+        defaults.setObject(dueDateFromPicker, forKey: "DueDate")
     }
     
     @IBAction func confirmDueDate() {
@@ -57,11 +62,7 @@ class SecondViewController: UIViewController {
         } else {
         dueDateSelector.hidden = true
         confirmDateButton.hidden = true
-        
-        let defaults = NSUserDefaults.standardUserDefaults()
-        defaults.setObject(dueDate, forKey: "DueDate")
         }
-        // add segue for moving to next weekly size screen
         
     }
     
