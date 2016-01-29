@@ -14,12 +14,11 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var dueDateLabel: UILabel!
     @IBOutlet weak var setDateButton: UIButton!
     @IBOutlet weak var dueDateSelector: UIDatePicker!
-    
     @IBOutlet weak var confirmDateButton: UIButton!
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // dueDateSelector.addTarget(self, action: Selector("datePickerChanged:"), forControlEvents: UIControlEvents.ValueChanged)
         dueDateSelector.hidden = true
         confirmDateButton.hidden = true
         setDateButton.hidden = false
@@ -39,6 +38,7 @@ class SecondViewController: UIViewController {
     
     // Set the due date 
     func datePickerChanged(datePicker:UIDatePicker) {
+        datePicker.minimumDate = NSDate()
         var dueDateFromPicker = NSDate()
         setDateButton.hidden = true
         let formatter = NSDateFormatter()

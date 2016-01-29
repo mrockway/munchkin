@@ -8,19 +8,27 @@
 
 import UIKit
 
+
+
+
 class ImageViewController: UIViewController {
     func setDate() {
         let defaults = NSUserDefaults.standardUserDefaults()
         if let dueDate = defaults.stringForKey("DueDate") {
             print(dueDate)
         }
+        var data = ["weight": "8lbs", "length": "20in"]
+        for (weight, length) in data {
+            print("\(weight) and \(length)")
+        }
+
     }
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setDate()
-        // Do any additional setup after loading the view.
+                // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {

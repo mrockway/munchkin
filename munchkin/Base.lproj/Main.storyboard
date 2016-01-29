@@ -190,9 +190,10 @@
                         <viewControllerLayoutGuide type="bottom" id="OR3-ip-eDF"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="vVK-9S-dw7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eDy-TI-QLc">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="week40test" translatesAutoresizingMaskIntoConstraints="NO" id="eDy-TI-QLc">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="heightClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="20" y="28" width="374" height="688"/>
@@ -228,4 +229,7 @@
             <point key="canvasLocation" x="468" y="-410.25"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="week40test" width="414" height="736"/>
+    </resources>
 </document>
