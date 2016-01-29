@@ -9,10 +9,17 @@
 import UIKit
 
 class ImageViewController: UIViewController {
+    func setDate() {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        if let dueDate = defaults.stringForKey("DueDate") {
+            print(dueDate)
+        }
+    }
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setDate()
         // Do any additional setup after loading the view.
     }
 

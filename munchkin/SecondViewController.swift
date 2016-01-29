@@ -49,9 +49,18 @@ class SecondViewController: UIViewController {
     }
     
     @IBAction func confirmDueDate() {
+        
+        if (dueDate == "") {
+            let alert = UIAlertController(title: "Please enter the due date", message: "No never ending pregnancies allowed", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+        } else {
         dueDateSelector.hidden = true
         confirmDateButton.hidden = true
         
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setObject(dueDate, forKey: "DueDate")
+        }
         // add segue for moving to next weekly size screen
         
     }
