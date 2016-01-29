@@ -8,26 +8,25 @@
 
 import UIKit
 
-
+// Check dueDate - Todays Date and check if date in weekly range
+// Set image based on min day of range, it should == arr[i]
 
 
 class ImageViewController: UIViewController {
     func setDate() {
         let defaults = NSUserDefaults.standardUserDefaults()
         if let dueDate = defaults.stringForKey("DueDate") {
-            print(dueDate)
+            print("image screen \(dueDate)")
         }
-        var data = ["weight": "8lbs", "length": "20in"]
-        for (weight, length) in data {
-            print("\(weight) and \(length)")
-        }
-
     }
-
+    
+    let data = [(week: 1, weight: "8lbs", length: "20in"), (week: 2, weight: "223b", length: "20ins")]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setDate()
+        print("data is \(data[0].week)")
                 // Do any additional setup after loading the view.
     }
 
