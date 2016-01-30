@@ -26,7 +26,7 @@ class ImageViewController: UIViewController {
         weeklyImage.image = UIImage(named: "\(weeksLeft)")
     }
     
-    let data = [(week: 1, weight: "8lbs", length: "20in"), (week: 2, weight: "223b", length: "20ins"), (week: 3, weight: "223b", length: "20ins"), (week: 4, weight: "223b", length: "20ins"), (week: 5, weight: "223b", length: "20ins"), (week: 6, weight: "223b", length: "20ins")]
+//    let data = [(week: 1, weight: "8lbs", length: "20in"), (week: 2, weight: "223b", length: "20ins"), (week: 3, weight: "223b", length: "20ins"), (week: 4, weight: "223b", length: "20ins"), (week: 5, weight: "223b", length: "20ins"), (week: 6, weight: "223b", length: "20ins")]
     
     
     
