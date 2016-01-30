@@ -75,10 +75,13 @@
                         </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <segue destination="uM1-l6-4g6" kind="show" identifier="skipWelcome" id="Prn-Ss-VdR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-655" y="-410.25"/>
+            <point key="canvasLocation" x="-683" y="-410.25"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="tyB-Jo-vea">
@@ -232,4 +235,7 @@
             <point key="canvasLocation" x="468" y="-410.25"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Prn-Ss-VdR"/>
+    </inferredMetricsTieBreakers>
 </document>

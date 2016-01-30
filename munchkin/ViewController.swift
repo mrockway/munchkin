@@ -9,9 +9,12 @@
 import UIKit
 
 class ViewController: UIViewController {
-    func setDate() {
+    
+    func getUserSettings() -> Bool {
         let defaults = NSUserDefaults.standardUserDefaults()
-        let dueDate = defaults.stringForKey("DueDate")
+        let returningUser = defaults.boolForKey("returningUser")
+        print(returningUser)
+        return returningUser
     }
     @IBAction func buttonPressed()  {
         
@@ -19,6 +22,11 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let skipWelcome = getUserSettings()
+        print(skipWelcome)
+        if (skipWelcome == false) {
+            self.performSegueWithIdentifier("skipWelcome", sender: nil)
+        }
         // Do any additional setup after loading the view, typically from a nib.
     }
 

@@ -40,7 +40,6 @@ class SecondViewController: UIViewController {
     
     // Set the due date 
     func datePickerChanged(datePicker:UIDatePicker) {
-        let today = NSDate()
         datePicker.minimumDate = NSDate()
         setDateButton.hidden = true
         let formatter = NSDateFormatter()
@@ -49,6 +48,7 @@ class SecondViewController: UIViewController {
         dueDate = formatter.stringFromDate(dueDateFromPicker)
         dueDateLabel.text = "Due Date: \(dueDate)"
         defaults.setObject(dueDateFromPicker, forKey: "DueDate")
+        defaults.setBool(true, forKey: "returningUser")
     }
     
     @IBAction func confirmDueDate() {
@@ -58,12 +58,32 @@ class SecondViewController: UIViewController {
             alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil))
             self.presentViewController(alert, animated: true, completion: nil)
         } else {
+        
         dueDateSelector.hidden = true
         confirmDateButton.hidden = true
+        registerNotifications()
+        scheduleNofifications()
         }
         
     }
     
+    func registerNotifications() {
+        let notificationSettings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: nil)
+        UIApplication.sharedApplication().registerUserNotificationSettings(notificationSettings)
+    }
+    
+    func scheduleNofifications() {
+        let settings = UIApplication.sharedApplication().currentUserNotificationSettings()
+        if settings!.types == .None {
+            return
+        }
+        let notification = UILocalNotification()
+        notification.fireDate = NSDate(timeIntervalSinceNow: 10)
+        notification.alertBody = "Check out your new picture"
+        notification.alertAction = "Swipe here now"
+        notification.soundName = UILocalNotificationDefaultSoundName
+        UIApplication.sharedApplication().scheduleLocalNotification(notification)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
