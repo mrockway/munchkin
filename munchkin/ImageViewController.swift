@@ -20,10 +20,8 @@ class ImageViewController: UIViewController {
         let today = NSDate()
         let defaults = NSUserDefaults.standardUserDefaults()
         let dueDate = defaults.objectForKey("DueDate")
-        print("due date from storage \(dueDate)")
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "yyyy/MM/dd"
-        print(Int(ceil((dueDate!.timeIntervalSinceDate(today))/604800)))
         let weeksLeft = String(Int(ceil(dueDate!.timeIntervalSinceDate(today)/604800)))
         weeklyImage.image = UIImage(named: "\(weeksLeft)")
     }

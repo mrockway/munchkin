@@ -11,9 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     func setDate() {
         let defaults = NSUserDefaults.standardUserDefaults()
-        if let dueDate = defaults.stringForKey("DueDate") {
-            print("date from str \(dueDate)")
-        }
+        let dueDate = defaults.stringForKey("DueDate")
     }
     @IBAction func buttonPressed()  {
         

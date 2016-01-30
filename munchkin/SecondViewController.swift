@@ -46,8 +46,6 @@ class SecondViewController: UIViewController {
         let formatter = NSDateFormatter()
         formatter.dateStyle = NSDateFormatterStyle.LongStyle
         dueDateFromPicker = datePicker.date
-        print("due date from picker \(dueDateFromPicker)")
-        print(dueDateFromPicker.timeIntervalSinceDate(today))
         dueDate = formatter.stringFromDate(dueDateFromPicker)
         dueDateLabel.text = "Due Date: \(dueDate)"
         defaults.setObject(dueDateFromPicker, forKey: "DueDate")
