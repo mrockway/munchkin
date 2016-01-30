@@ -14,6 +14,8 @@ import UIKit
 
 class ImageViewController: UIViewController {
     
+    @IBOutlet weak var weeklyImage: UIImageView!
+    
     func findWeek() {
         let today = NSDate()
         let defaults = NSUserDefaults.standardUserDefaults()
@@ -21,16 +23,18 @@ class ImageViewController: UIViewController {
         print("due date from storage \(dueDate)")
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "yyyy/MM/dd"
-        print((dueDate!.timeIntervalSinceDate(today))/86400)
+        print(Int(ceil((dueDate!.timeIntervalSinceDate(today))/604800)))
+        let weeksLeft = String(Int(ceil(dueDate!.timeIntervalSinceDate(today)/604800)))
+        weeklyImage.image = UIImage(named: "\(weeksLeft)")
     }
     
-    let data = [(week: 1, weight: "8lbs", length: "20in"), (week: 2, weight: "223b", length: "20ins")]
+    let data = [(week: 1, weight: "8lbs", length: "20in"), (week: 2, weight: "223b", length: "20ins"), (week: 3, weight: "223b", length: "20ins"), (week: 4, weight: "223b", length: "20ins"), (week: 5, weight: "223b", length: "20ins"), (week: 6, weight: "223b", length: "20ins")]
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         findWeek()
-        print("data is \(data[1].week)")
                 // Do any additional setup after loading the view.
     }
 
