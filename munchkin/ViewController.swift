@@ -10,23 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    func getUserSettings() -> Bool {
-        let defaults = NSUserDefaults.standardUserDefaults()
-        let returningUser = defaults.boolForKey("returningUser")
-        print(returningUser)
-        return returningUser
-    }
     @IBAction func buttonPressed()  {
         
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let skipWelcome = getUserSettings()
-        print(skipWelcome)
-        if (skipWelcome == false) {
-            self.performSegueWithIdentifier("skipWelcome", sender: nil)
-        }
         // Do any additional setup after loading the view, typically from a nib.
     }
 

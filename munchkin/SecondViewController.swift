@@ -61,20 +61,17 @@ class SecondViewController: UIViewController {
         
         dueDateSelector.hidden = true
         confirmDateButton.hidden = true
-        registerNotifications()
         scheduleNofifications()
         }
         
     }
     
-    func registerNotifications() {
-        let notificationSettings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: nil)
-        UIApplication.sharedApplication().registerUserNotificationSettings(notificationSettings)
-    }
-    
     func scheduleNofifications() {
         let settings = UIApplication.sharedApplication().currentUserNotificationSettings()
         if settings!.types == .None {
+            let ac = UIAlertController(title: "Enable notifications to find out when you new comparison is ready", message: "Either we don't have permission to schedule notifications, or we haven't asked yet.", preferredStyle: .Alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+            presentViewController(ac, animated: true, completion: nil)
             return
         }
         let notification = UILocalNotification()
@@ -82,6 +79,7 @@ class SecondViewController: UIViewController {
         notification.alertBody = "Check out your new picture"
         notification.alertAction = "Swipe here now"
         notification.soundName = UILocalNotificationDefaultSoundName
+        notification.applicationIconBadgeNumber = UIApplication.sharedApplication().applicationIconBadgeNumber + 1
         UIApplication.sharedApplication().scheduleLocalNotification(notification)
     }
     override func didReceiveMemoryWarning() {
