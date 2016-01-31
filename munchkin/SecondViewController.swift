@@ -52,7 +52,7 @@ class SecondViewController: UIViewController {
     }
     
     @IBAction func confirmDueDate() {
-        
+        print(dueDate)
         if (dueDate == "") {
             let alert = UIAlertController(title: "Please enter the due date", message: "No never ending pregnancies allowed", preferredStyle: UIAlertControllerStyle.Alert)
             alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil))
@@ -67,6 +67,7 @@ class SecondViewController: UIViewController {
     }
     
     func scheduleNofifications() {
+        // Check to see if User has allowed Notifications
         let settings = UIApplication.sharedApplication().currentUserNotificationSettings()
         if settings!.types == .None {
             let ac = UIAlertController(title: "Enable notifications to find out when you new comparison is ready", message: "Either we don't have permission to schedule notifications, or we haven't asked yet.", preferredStyle: .Alert)
@@ -74,14 +75,27 @@ class SecondViewController: UIViewController {
             presentViewController(ac, animated: true, completion: nil)
             return
         }
+        
+        //Build notification
+        let weeksRemaining = Double(repeatNotifications())
         let notification = UILocalNotification()
-        notification.fireDate = NSDate(timeIntervalSinceNow: 10)
-        notification.alertBody = "Check out your new picture"
-        notification.alertAction = "Swipe here now"
-        notification.soundName = UILocalNotificationDefaultSoundName
-        notification.applicationIconBadgeNumber = UIApplication.sharedApplication().applicationIconBadgeNumber + 1
-        UIApplication.sharedApplication().scheduleLocalNotification(notification)
+        for var i:Double = 0; i <= weeksRemaining; i++ {
+            notification.fireDate = NSDate(timeIntervalSinceNow: (604800 * i ))
+            notification.repeatInterval = NSCalendarUnit.Weekday
+            notification.alertBody = "Check out your new picture"
+            notification.alertAction = "see the image"
+            notification.soundName = UILocalNotificationDefaultSoundName
+            notification.applicationIconBadgeNumber = UIApplication.sharedApplication().applicationIconBadgeNumber + 1
+            UIApplication.sharedApplication().scheduleLocalNotification(notification)
+        }
     }
+    
+    func repeatNotifications() -> Int {
+        let weeks = dueDateFromPicker.timeIntervalSinceDate(NSDate())/604800
+        let weeksLeft = Int(ceil(weeks))
+        return weeksLeft
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
