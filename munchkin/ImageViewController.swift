@@ -8,32 +8,72 @@
 
 import UIKit
 
-// Check dueDate - Todays Date and check if date in weekly range
-// Set image based on min day of range, it should == arr[i]
-
-
 class ImageViewController: UIViewController {
     
+    @IBOutlet weak var settings: UIButton!
+    @IBOutlet weak var WelcomeTour: UIButton!
     @IBOutlet weak var weeklyImage: UIImageView!
+    @IBAction func welcomeTour(sender: AnyObject) {
+        
+    }
     
-    func findWeek() {
-        let today = NSDate()
+    func firstTimeUser() {
+        let skipWelcome = getUserSettings()
+        if (skipWelcome == true) {
+            findWeek()
+            return
+        } else {
+            return
+        }
+    }
+    
+    func getUserSettings() -> Bool {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        let returningUser = defaults.boolForKey("returningUser")
+        if returningUser == false {
+            WelcomeTour.hidden = false
+            settings.hidden = true
+            return false
+        } else {
+            WelcomeTour.hidden = true
+            return true
+        }
+    }
+
+    func getDate() -> NSDate {
         let defaults = NSUserDefaults.standardUserDefaults()
         let dueDate = defaults.objectForKey("DueDate")
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "yyyy/MM/dd"
-        let weeksLeft = String(Int(ceil(dueDate!.timeIntervalSinceDate(today)/604800)))
-        weeklyImage.image = UIImage(named: "\(weeksLeft)")
+        if dueDate == nil {
+            return NSDate()
+        } else {
+            return dueDate as! NSDate
+        }
+
     }
-    
-    let data = [(week: 1, weight: "8lbs", length: "20in"), (week: 2, weight: "223b", length: "20ins"), (week: 3, weight: "223b", length: "20ins"), (week: 4, weight: "223b", length: "20ins"), (week: 5, weight: "223b", length: "20ins"), (week: 6, weight: "223b", length: "20ins")]
-    
-    
+    func findWeek() {
+        let dueDate = getDate()
+        let today = NSDate()
+        let compare = (dueDate.compare(today)  == .OrderedDescending)
+        if( compare  == true ) {
+            // dueDate < today
+            let weeks = dueDate.timeIntervalSinceDate(today)/604800
+            let weeksLeft = String(Int(ceil(weeks)))
+            weeklyImage.image = UIImage(named: "\(weeksLeft)")
+        } else {
+            let weeks = today.timeIntervalSinceDate(dueDate)/604800
+            let weeksLeft = String(Int(ceil(weeks))+40)
+            weeklyImage.image = UIImage(named: "\(weeksLeft)")
+        }
+    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        firstTimeUser()
         findWeek()
-                // Do any additional setup after loading the view.
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {

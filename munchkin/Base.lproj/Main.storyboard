@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="uM1-l6-4g6">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -78,7 +78,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-655" y="-410.25"/>
+            <point key="canvasLocation" x="-683" y="-410.25"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="tyB-Jo-vea">
@@ -193,6 +193,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eDy-TI-QLc">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="28" width="374" height="688"/>
+                                </variation>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L3i-Ae-u4T">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" red="0.234723143" green="1" blue="0.097400856310000006" alpha="1" colorSpace="calibratedRGB"/>
@@ -201,29 +207,39 @@
                                     <rect key="frame" x="337" y="28" width="57" height="30"/>
                                 </variation>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eDy-TI-QLc">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jR6-gd-P6X">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="GET STARTED"/>
                                 <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="28" width="374" height="688"/>
+                                    <rect key="frame" x="132" y="509" width="167" height="44"/>
                                 </variation>
-                            </imageView>
+                                <connections>
+                                    <action selector="welcomeTour:" destination="uM1-l6-4g6" eventType="touchUpInside" id="COS-4a-ZgB"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="ShowWelcome" id="MpX-Uu-9NT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.84313725490000002" green="0.85490196080000003" blue="0.82794148489999997" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="L3i-Ae-u4T"/>
                                 <exclude reference="eDy-TI-QLc"/>
+                                <exclude reference="L3i-Ae-u4T"/>
+                                <exclude reference="jR6-gd-P6X"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
                             <mask key="subviews">
-                                <include reference="L3i-Ae-u4T"/>
                                 <include reference="eDy-TI-QLc"/>
+                                <include reference="L3i-Ae-u4T"/>
+                                <include reference="jR6-gd-P6X"/>
                             </mask>
                         </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
+                        <outlet property="WelcomeTour" destination="jR6-gd-P6X" id="pvv-ad-mMx"/>
+                        <outlet property="settings" destination="L3i-Ae-u4T" id="I1h-Iu-k71"/>
                         <outlet property="weeklyImage" destination="eDy-TI-QLc" id="URy-oz-ejS"/>
                     </connections>
                 </viewController>
