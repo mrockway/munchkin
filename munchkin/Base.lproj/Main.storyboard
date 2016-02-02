@@ -15,11 +15,11 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find the size of your baby week by week ..." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="fef-VA-Zpr">
-                                <rect key="frame" x="83" y="157" width="435" height="160"/>
+                                <rect key="frame" x="83" y="157" width="249" height="160"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="160" id="Qn8-Id-fxv"/>
                                 </constraints>
@@ -34,7 +34,7 @@
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bOR-1I-6WJ">
-                                <rect key="frame" x="93" y="284" width="415" height="62"/>
+                                <rect key="frame" x="93" y="420" width="229" height="62"/>
                                 <color key="backgroundColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="62" id="d3i-zJ-SqA"/>
@@ -55,7 +55,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Codename: Munchkin" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="ecK-0b-i3K">
-                                <rect key="frame" x="66" y="49" width="456" height="129"/>
+                                <rect key="frame" x="66" y="49" width="270" height="129"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="129" id="Xtc-pl-lOA"/>
                                 </constraints>
@@ -70,7 +70,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="in a MANLY way!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="7wV-UA-ZNi">
-                                <rect key="frame" x="101" y="144" width="398" height="106"/>
+                                <rect key="frame" x="101" y="280" width="212" height="106"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="106" id="ADG-Ot-kDB"/>
                                 </constraints>
@@ -108,6 +108,7 @@
                         </variation>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
