@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -18,20 +17,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading  Codename: Munchkin" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="y8P-7t-N7A">
-                                <rect key="frame" x="105" y="250" width="390" height="100"/>
-                                <color key="backgroundColor" red="1" green="0.21960784310000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
-                                <color key="textColor" red="1" green="0.98823529409999999" blue="0.76862745099999996" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="codename-title" translatesAutoresizingMaskIntoConstraints="NO" id="5G7-oU-cMl">
+                                <rect key="frame" x="167" y="133" width="266" height="208"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="266" id="CxS-eU-mba"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.94117647059999998" green="0.92941176469999998" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="y8P-7t-N7A" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="0cI-MI-7cg"/>
-                            <constraint firstItem="y8P-7t-N7A" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="230" id="EAv-9N-29n"/>
-                            <constraint firstItem="y8P-7t-N7A" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Z3h-OG-Dfu"/>
-                            <constraint firstItem="y8P-7t-N7A" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="85" id="aPc-ef-Z3r"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="5G7-oU-cMl" secondAttribute="bottom" constant="259" id="AZg-Hm-Kct"/>
+                            <constraint firstItem="5G7-oU-cMl" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="DlI-Sf-wOC"/>
+                            <constraint firstItem="5G7-oU-cMl" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="113" id="bMC-D2-8Rm"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -40,4 +37,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="codename-title" width="423" height="278"/>
+    </resources>
 </document>

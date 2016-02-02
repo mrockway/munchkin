@@ -45,6 +45,7 @@ class ImageViewController: UIViewController {
             comparisonText.hidden = true
             staticComapreText.hidden = true
             instagramButton.hidden = true
+            weeklyImage.hidden = true
             return false
         } else {
             WelcomeTour.hidden = true

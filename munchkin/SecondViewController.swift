@@ -61,7 +61,7 @@ class SecondViewController: UIViewController {
         
         dueDateSelector.hidden = true
         confirmDateButton.hidden = true
-        scheduleNofifications()
+        // scheduleNofifications()
         }
         
     }
@@ -77,6 +77,7 @@ class SecondViewController: UIViewController {
         }
         
         //Build notification
+        UIApplication.sharedApplication().cancelAllLocalNotifications()
         let weeksRemaining = Double(repeatNotifications())
         let notification = UILocalNotification()
         for var i:Double = 0; i <= weeksRemaining; i++ {
@@ -93,6 +94,7 @@ class SecondViewController: UIViewController {
     func repeatNotifications() -> Int {
         let weeks = dueDateFromPicker.timeIntervalSinceDate(NSDate())/604800
         let weeksLeft = Int(ceil(weeks))
+        print(weeksLeft)
         return weeksLeft
     }
     
