@@ -15,21 +15,22 @@
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="codename-title" translatesAutoresizingMaskIntoConstraints="NO" id="M4c-Lt-g83">
-                                <rect key="frame" x="15" y="91" width="570" height="304"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="codename-title" translatesAutoresizingMaskIntoConstraints="NO" id="bpv-fY-FBi">
+                                <rect key="frame" x="45" y="93" width="325" height="219"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.94117647059999998" green="0.92941176469999998" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="M4c-Lt-g83" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="71" id="6ae-sf-jjN"/>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="M4c-Lt-g83" secondAttribute="bottom" constant="205" id="KsE-WQ-uqP"/>
-                            <constraint firstItem="M4c-Lt-g83" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="SfM-sE-E1n"/>
-                            <constraint firstItem="M4c-Lt-g83" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="-5" id="sDO-Fq-Uqx"/>
+                            <constraint firstItem="bpv-fY-FBi" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="73" id="6Zh-J7-zW3"/>
+                            <constraint firstItem="bpv-fY-FBi" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="25" id="6yJ-7X-crD"/>
+                            <constraint firstItem="bpv-fY-FBi" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="NKA-g3-6gl"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="bpv-fY-FBi" secondAttribute="bottom" constant="424" id="r09-6n-7dl"/>
                         </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
