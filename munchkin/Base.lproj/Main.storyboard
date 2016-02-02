@@ -288,16 +288,6 @@
                                 <color key="textColor" red="0.94117647059999998" green="0.92941176469999998" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P2f-v0-8tk">
-                                <rect key="frame" x="124" y="639" width="167" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.21960784310000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Share Instagram">
-                                    <color key="titleColor" red="1" green="0.98823529409999999" blue="0.76862745099999996" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="shareInstagram:" destination="uM1-l6-4g6" eventType="touchUpInside" id="6KS-OX-68N"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your baby is the same size as" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="olt-dS-pAi">
                                 <rect key="frame" x="35" y="477" width="343" height="28"/>
                                 <constraints>
@@ -307,6 +297,16 @@
                                 <color key="textColor" red="0.94117647059999998" green="0.92941176469999998" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P2f-v0-8tk">
+                                <rect key="frame" x="124" y="639" width="167" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.21960784310000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Share on Instagram">
+                                    <color key="titleColor" red="1" green="0.98823529409999999" blue="0.76862745099999996" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareInstagram:" destination="uM1-l6-4g6" eventType="touchUpInside" id="6KS-OX-68N"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.9882352941176471" blue="0.76862745098039209" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -350,6 +350,7 @@
                         <outlet property="comparisonText" destination="bO2-K4-8ee" id="v8K-bi-71N"/>
                         <outlet property="instagramButton" destination="P2f-v0-8tk" id="qVR-08-RAE"/>
                         <outlet property="settings" destination="L3i-Ae-u4T" id="I1h-Iu-k71"/>
+                        <outlet property="staticComapreText" destination="olt-dS-pAi" id="FQo-bi-kOu"/>
                         <outlet property="weekNumber" destination="Qrn-Cf-4fH" id="2Jo-bu-ojO"/>
                         <outlet property="weeklyImage" destination="eDy-TI-QLc" id="URy-oz-ejS"/>
                     </connections>

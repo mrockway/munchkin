@@ -40,7 +40,7 @@ class SecondViewController: UIViewController {
     
     // Set the due date 
     func datePickerChanged(datePicker:UIDatePicker) {
-        datePicker.minimumDate = NSDate()
+        //datePicker.minimumDate = NSDate()
         setDateButton.hidden = true
         let formatter = NSDateFormatter()
         formatter.dateStyle = NSDateFormatterStyle.LongStyle
