@@ -17,14 +17,18 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var setDateButton: UIButton!
     @IBOutlet weak var dueDateSelector: UIDatePicker!
     @IBOutlet weak var confirmDateButton: UIButton!
-    
+    @IBOutlet weak var enterDateLabel: UILabel!
 
+    
+    @IBOutlet weak var cancelButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         dueDateSelector.hidden = true
         confirmDateButton.hidden = true
         setDateButton.hidden = false
         dueDateLabel.hidden = true
+        
         
         
         // Do any additional setup after loading the view.
@@ -52,16 +56,14 @@ class SecondViewController: UIViewController {
     }
     
     @IBAction func confirmDueDate() {
-        print(dueDate)
         if (dueDate == "") {
             let alert = UIAlertController(title: "Please enter the due date", message: "No never ending pregnancies allowed", preferredStyle: UIAlertControllerStyle.Alert)
             alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil))
             self.presentViewController(alert, animated: true, completion: nil)
         } else {
-        
-        dueDateSelector.hidden = true
-        confirmDateButton.hidden = true
-        scheduleNofifications()
+            dueDateSelector.hidden = true
+            confirmDateButton.hidden = true
+            scheduleNofifications()
         }
         
     }
@@ -102,8 +104,13 @@ class SecondViewController: UIViewController {
     func repeatNotifications() -> Int {
         let weeks = dueDateFromPicker.timeIntervalSinceDate(NSDate())/604800
         let weeksLeft = Int(ceil(weeks))
-        print(weeksLeft)
+        print("weeks left \(weeksLeft)")
         return weeksLeft
+    }
+    
+    func adjustDueDate() {
+        enterDateLabel.text = "Change the due date"
+        setDateButton.setTitle("Edit Due Date", forState: .Normal)
     }
     
     override func didReceiveMemoryWarning() {

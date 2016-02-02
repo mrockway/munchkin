@@ -19,10 +19,37 @@ class ImageViewController: UIViewController {
     @IBOutlet weak var weekNumber: UILabel!
     @IBOutlet weak var staticComapreText: UILabel!
     @IBOutlet weak var backgroundColor: UIImageView!
-    
+    var editDate: Bool!
     
     @IBAction func welcomeTour(sender: AnyObject) {
         
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setAttributes()
+        firstTimeUser()
+        // findWeek()
+        // Do any additional setup after loading the view.
+    }
+    
+    func setAttributes() {
+        let rgb: CGColorSpaceRef = CGColorSpaceCreateDeviceRGB()!
+        let black: [CGFloat]   = [240, 237, 187, 0.2]
+        settings.setTitle("\u{2699}", forState: .Normal)
+        instagramButton.layer.cornerRadius = 5
+        settings.layer.cornerRadius = 5
+        settings.layer.shadowOpacity = 1
+        settings.layer.shadowColor = CGColorCreate(rgb, black)
+        settings.layer.shadowRadius = 5
+        settings.layer.shadowOffset = CGSizeMake(-2, 2)
+        weeklyImage.layer.cornerRadius = 5
+        WelcomeTour.layer.cornerRadius = 5
+        backgroundColor.layer.cornerRadius = 5
+        instagramButton.layer.shadowColor = CGColorCreate(rgb, black)
+        instagramButton.layer.shadowOpacity = 1;
+        instagramButton.layer.shadowRadius = 5;
+        instagramButton.layer.shadowOffset = CGSizeMake(-2, 2)
     }
     
     func firstTimeUser() {
@@ -105,15 +132,10 @@ class ImageViewController: UIViewController {
     @IBAction func shareInstagram(sender: AnyObject) {
         print("button clicked")
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        firstTimeUser()
-        print(UIApplication.sharedApplication().scheduledLocalNotifications)
-        // findWeek()
-        // Do any additional setup after loading the view.
-    }
 
+    @IBAction func settingsClick(sender: AnyObject) {
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
