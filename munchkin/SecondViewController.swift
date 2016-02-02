@@ -40,7 +40,7 @@ class SecondViewController: UIViewController {
     
     // Set the due date 
     func datePickerChanged(datePicker:UIDatePicker) {
-        //datePicker.minimumDate = NSDate()
+        datePicker.minimumDate = NSDate()
         setDateButton.hidden = true
         let formatter = NSDateFormatter()
         formatter.dateStyle = NSDateFormatterStyle.LongStyle
@@ -61,7 +61,7 @@ class SecondViewController: UIViewController {
         
         dueDateSelector.hidden = true
         confirmDateButton.hidden = true
-        // scheduleNofifications()
+        scheduleNofifications()
         }
         
     }
@@ -69,6 +69,8 @@ class SecondViewController: UIViewController {
     func scheduleNofifications() {
         // Check to see if User has allowed Notifications
         let settings = UIApplication.sharedApplication().currentUserNotificationSettings()
+        
+        // Send message to user about not allowing notifications
         if settings!.types == .None {
             let ac = UIAlertController(title: "Enable notifications to find out when you new comparison is ready", message: "Either we don't have permission to schedule notifications, or we haven't asked yet.", preferredStyle: .Alert)
             ac.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
@@ -76,15 +78,21 @@ class SecondViewController: UIViewController {
             return
         }
         
-        //Build notification
+        // Clear any existing notifications
         UIApplication.sharedApplication().cancelAllLocalNotifications()
+        
+        // Set number of notifiations to schedule
         let weeksRemaining = Double(repeatNotifications())
+        
+        // Build notification
         let notification = UILocalNotification()
+        
+        // Loop to create notifications until the due date
         for var i:Double = 0; i <= weeksRemaining; i++ {
             notification.fireDate = NSDate(timeIntervalSinceNow: (604800 * i ))
-            notification.repeatInterval = NSCalendarUnit.Weekday
+            // notification.repeatInterval = NSCalendarUnit.Weekday
             notification.alertBody = "Check out your new picture"
-            notification.alertAction = "see the image"
+            notification.alertAction = "View image"
             notification.soundName = UILocalNotificationDefaultSoundName
             notification.applicationIconBadgeNumber = UIApplication.sharedApplication().applicationIconBadgeNumber + 1
             UIApplication.sharedApplication().scheduleLocalNotification(notification)

@@ -12,6 +12,7 @@ class ImageViewController: UIViewController {
     
     @IBOutlet weak var instagramButton: UIButton!
     @IBOutlet weak var settings: UIButton!
+    @IBOutlet weak var codenameTitle: UIImageView!
     @IBOutlet weak var WelcomeTour: UIButton!
     @IBOutlet weak var weeklyImage: UIImageView!
     @IBOutlet weak var comparisonText: UILabel!
@@ -49,6 +50,7 @@ class ImageViewController: UIViewController {
             return false
         } else {
             WelcomeTour.hidden = true
+            codenameTitle.hidden = true
             return true
         }
     }
@@ -107,6 +109,7 @@ class ImageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         firstTimeUser()
+        print(UIApplication.sharedApplication().scheduledLocalNotifications)
         // findWeek()
         // Do any additional setup after loading the view.
     }
