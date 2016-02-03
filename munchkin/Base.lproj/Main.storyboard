@@ -27,32 +27,8 @@
                                 <rect key="frame" x="20" y="495" width="374" height="221"/>
                                 <color key="backgroundColor" red="0.43921568630000002" green="0.72156862749999995" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Receive weekly notifications as your Munchkin grows." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="fef-VA-Zpr">
-                                <rect key="frame" x="39" y="92" width="337" height="163"/>
-                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="32"/>
-                                <color key="textColor" red="1" green="0.99607843139999996" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="56" y="298" width="301" height="100"/>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="57" y="201" width="301" height="60"/>
-                                </variation>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="but in a MANLY way!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="7wV-UA-ZNi">
-                                <rect key="frame" x="39" y="282" width="337" height="137"/>
-                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="32"/>
-                                <color key="textColor" red="1" green="0.99607843139999996" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="89" y="399" width="237" height="39"/>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="91" y="298" width="232" height="39"/>
-                                </variation>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bOR-1I-6WJ">
-                                <rect key="frame" x="57" y="550.5" width="299" height="110.5"/>
+                                <rect key="frame" x="57" y="550" width="299" height="110.5"/>
                                 <color key="backgroundColor" red="0.3294117647" green="0.81568627449999997" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="25"/>
                                 <state key="normal" title="CONTINUE">
@@ -69,9 +45,22 @@
                                     <segue destination="8tT-tM-vS0" kind="show" identifier="SecondViewController" id="7zL-Of-6Up"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Receive weekly notifications as your Munchkin grows.   In a MANLY way" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="fef-VA-Zpr">
+                                <rect key="frame" x="38.5" y="42" width="337" height="397.5"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="32"/>
+                                <color key="textColor" red="1" green="0.99607843139999996" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="56" y="298" width="301" height="100"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="57" y="201" width="301" height="60"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.99607843139999996" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="fef-VA-Zpr" firstAttribute="centerX" secondItem="ydV-T0-2op" secondAttribute="centerX" id="DMC-X0-NZ8"/>
                             <constraint firstItem="ydV-T0-2op" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Lwh-2c-uSv"/>
                             <constraint firstItem="bOR-1I-6WJ" firstAttribute="centerY" secondItem="VwY-1s-ynh" secondAttribute="centerY" id="UkI-Cr-86D"/>
                             <constraint firstItem="ydV-T0-2op" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Vbt-9r-OUw"/>
@@ -80,16 +69,14 @@
                             <constraint firstItem="VwY-1s-ynh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="cUT-bL-4Ln"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="VwY-1s-ynh" secondAttribute="bottom" constant="20" id="cXD-Ye-5Nn"/>
                             <constraint firstItem="VwY-1s-ynh" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="dLQ-Yd-ftp"/>
+                            <constraint firstItem="fef-VA-Zpr" firstAttribute="width" secondItem="ydV-T0-2op" secondAttribute="width" multiplier="0.9" id="iKk-Sq-gpK"/>
                             <constraint firstItem="ydV-T0-2op" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.6" id="j3U-tS-tVr"/>
                             <constraint firstItem="bOR-1I-6WJ" firstAttribute="centerX" secondItem="VwY-1s-ynh" secondAttribute="centerX" id="klq-if-bs1"/>
+                            <constraint firstItem="fef-VA-Zpr" firstAttribute="centerY" secondItem="ydV-T0-2op" secondAttribute="centerY" id="kuc-in-PsL"/>
                             <constraint firstItem="ydV-T0-2op" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="u1W-6i-rjD"/>
                             <constraint firstItem="VwY-1s-ynh" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.3" id="ujg-7h-6sI"/>
+                            <constraint firstItem="fef-VA-Zpr" firstAttribute="height" secondItem="ydV-T0-2op" secondAttribute="height" multiplier="0.9" id="z6M-A0-lV9"/>
                         </constraints>
-                        <variation key="heightClass=regular">
-                            <mask key="subviews">
-                                <include reference="7wV-UA-ZNi"/>
-                            </mask>
-                        </variation>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
