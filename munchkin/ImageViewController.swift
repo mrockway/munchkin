@@ -19,6 +19,8 @@ class ImageViewController: UIViewController {
     @IBOutlet weak var weekNumber: UILabel!
     @IBOutlet weak var staticComapreText: UILabel!
     @IBOutlet weak var backgroundColor: UIImageView!
+    @IBOutlet weak var imagecontainerbackground: UIImageView!
+    
     var editDate: Bool!
     
     @IBAction func welcomeTour(sender: AnyObject) {
@@ -37,19 +39,25 @@ class ImageViewController: UIViewController {
         let rgb: CGColorSpaceRef = CGColorSpaceCreateDeviceRGB()!
         let black: [CGFloat]   = [240, 237, 187, 0.2]
         settings.setTitle("\u{2699}", forState: .Normal)
-        instagramButton.layer.cornerRadius = 5
-        settings.layer.cornerRadius = 5
+        settings.layer.cornerRadius = 10
         settings.layer.shadowOpacity = 1
         settings.layer.shadowColor = CGColorCreate(rgb, black)
         settings.layer.shadowRadius = 5
         settings.layer.shadowOffset = CGSizeMake(-2, 2)
-        weeklyImage.layer.cornerRadius = 5
-        WelcomeTour.layer.cornerRadius = 5
-        backgroundColor.layer.cornerRadius = 5
+        WelcomeTour.layer.cornerRadius = 10
+        weeklyImage.layer.cornerRadius = 10
+        backgroundColor.layer.borderWidth = 2
+        backgroundColor.layer.borderColor = UIColor(red:154/255.0, green:154/255.0, blue:147/255.0, alpha: 1.0).CGColor
+        imagecontainerbackground.layer.borderWidth = 2
+        imagecontainerbackground.layer.borderColor = UIColor(red:154/255.0, green:154/255.0, blue:147/255.0, alpha: 1.0).CGColor
+        backgroundColor.layer.cornerRadius = 10
+        instagramButton.layer.cornerRadius = 5
         instagramButton.layer.shadowColor = CGColorCreate(rgb, black)
         instagramButton.layer.shadowOpacity = 1;
-        instagramButton.layer.shadowRadius = 5;
+        instagramButton.layer.shadowRadius = 10;
         instagramButton.layer.shadowOffset = CGSizeMake(-2, 2)
+        imagecontainerbackground.layer.cornerRadius = 10
+
     }
     
     func firstTimeUser() {
@@ -102,9 +110,6 @@ class ImageViewController: UIViewController {
             // dueDate < today
             let weeks = dueDate.timeIntervalSinceDate(today)/604800
             let weeksLeft = Int(ceil(weeks))
-            print("weeks \(weeks)")
-            print("days left is \(dueDate.timeIntervalSinceDate(today)/86400)")
-            print("weeksLeft \(weeksLeft), due date \(dueDate)")
             weekNumber.text = "Your baby is in week \( 40 - weeksLeft )"
             weeklyImage.image = UIImage(named: "\(String(weeksLeft))")
             comparisonText.text = "\(data[weeksLeft].comparison)"
@@ -112,10 +117,6 @@ class ImageViewController: UIViewController {
             let weeks = today.timeIntervalSinceDate(dueDate)/604800
             let weeksLeft = Int(floor(weeks))
             let weeksOver = weeksLeft + 40
-            print(weeksOver)
-            print("else days left is \(today.timeIntervalSinceDate(dueDate)/86400)")
-            print("else weeks \(weeks)")
-            print("else weeksLeft \(weeksOver), due date \(dueDate)")
             if (weeksLeft == 0) {
                 weekNumber.text = "Your baby is due this week!"
                 weeklyImage.image = UIImage(named: "\(String(weeksLeft ))")
@@ -131,6 +132,7 @@ class ImageViewController: UIViewController {
 
     @IBAction func shareInstagram(sender: AnyObject) {
         print("button clicked")
+
     }
 
     @IBAction func settingsClick(sender: AnyObject) {
