@@ -1,5 +1,8 @@
 ##Codename: Munchkin
-Compare your childs growth with objects that you, a MAN, can relate to.
+A comparison of your Munchkin's fetal growth to manly objects.
+
+##GitHub Link
+[https://www.github.com/mrockway/munchkin]
 
 ##Technologies Used
 - Swift
