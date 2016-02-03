@@ -22,6 +22,7 @@ class ViewController: UIViewController {
         continueBackgroundContainer.layer.cornerRadius = 10
         continueButton.layer.cornerRadius = 5
         descriptionBackgroundContainer.layer.cornerRadius = 10
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 

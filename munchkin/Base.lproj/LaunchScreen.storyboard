@@ -19,15 +19,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="codename-title" translatesAutoresizingMaskIntoConstraints="NO" id="bpv-fY-FBi">
-                                <rect key="frame" x="45" y="93" width="325" height="219"/>
+                                <rect key="frame" x="45" y="134" width="325" height="219"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.99607843139999996" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="bpv-fY-FBi" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="73" id="6Zh-J7-zW3"/>
-                            <constraint firstItem="bpv-fY-FBi" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="25" id="6yJ-7X-crD"/>
-                            <constraint firstItem="bpv-fY-FBi" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="NKA-g3-6gl"/>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="bpv-fY-FBi" secondAttribute="bottom" constant="424" id="r09-6n-7dl"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="bpv-fY-FBi" secondAttribute="bottom" constant="383" id="8aS-IP-s3r"/>
+                            <constraint firstItem="bpv-fY-FBi" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="114" id="JEb-78-P96"/>
+                            <constraint firstItem="bpv-fY-FBi" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="25" id="MyU-09-Or2"/>
+                            <constraint firstItem="bpv-fY-FBi" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Sqx-5X-O70"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>

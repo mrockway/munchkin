@@ -82,10 +82,12 @@ class ImageViewController: UIViewController {
             staticComapreText.hidden = true
             instagramButton.hidden = true
             weeklyImage.hidden = true
+            imagecontainerbackground.hidden = true
             return false
         } else {
             WelcomeTour.hidden = true
             codenameTitle.hidden = true
+            
             return true
         }
     }
@@ -148,7 +150,7 @@ class ImageViewController: UIViewController {
         (week: "40", length: "20.16 inches", weight: "7.63 pounds", comparison: "a rack of ribs"),
         (week: "39", length: "19.96 inches", weight: "7.25 pounds", comparison: "a bucket of fried chicken"),
         (week: "38", length: "19.61 inches", weight: "6.80 pounds", comparison: "Indy's fedora"),
-        (week: "37", length: "19.13 inches", weight: "6.30 pounds", comparison: "a size 10 shoe"),
+        (week: "37", length: "19.13 inches", weight: "6.30 pounds", comparison: "a toolbox"),
         (week: "36", length: "18.66 inches", weight: "5.78 pounds", comparison: "the diameter of a rim"),
         (week: "35", length: "18.19 inches", weight: "5.25 pounds", comparison: "a mid-sized crowbar"),
         (week: "34", length: "17.72 inches", weight: "4.73 pounds", comparison: "a baseball glove"),
@@ -176,7 +178,7 @@ class ImageViewController: UIViewController {
         (week: "12", length: "2.13 inches",	weight: "0.49 ounce", comparison: "a shot glass"),
         (week: "11", length: "1.61 inch",	weight: "0.25 ounce", comparison: "a Lego mini figure"),
         (week: "10", length: "1.22 inch",	weight: "0.14 ounce", comparison: "a poker chip"),
-        (week: "9", length: "0.90 inch", weight: "0.07 ounce", comparison: "a lugnut"),
+        (week: "9", length: "0.90 inch", weight: "0.07 ounce", comparison: "a standard nut"),
         (week: "8", length: "0.63 inch", weight: "0.04 ounce", comparison: "a cufflink"),
         (week: "7", length: "N/A",	weight: "N/A", comparison: ""),
         (week: "6", length: "N/A",	weight: "N/A", comparison: ""),
