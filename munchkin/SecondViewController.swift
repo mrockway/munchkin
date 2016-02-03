@@ -46,10 +46,11 @@ class SecondViewController: UIViewController {
         dueDateLabel.hidden = false
         setDateButton.hidden = true
         confirmDateButton.hidden = false
-        let savedDueDate = defaults.objectForKey("DueDate") as! NSDate
-        dueDateSelector.setDate(savedDueDate, animated: true)
-        formatter.dateStyle = NSDateFormatterStyle.LongStyle
-        dueDateLabel.text = "Due date: \(formatter.stringFromDate(savedDueDate))"
+        if let savedDueDate = defaults.objectForKey("DueDate") {
+            dueDateSelector.setDate(savedDueDate as! NSDate, animated: true)
+            formatter.dateStyle = NSDateFormatterStyle.LongStyle
+            dueDateLabel.text = "Due date: \(formatter.stringFromDate(savedDueDate as! NSDate))"
+        }
     }
     
     
