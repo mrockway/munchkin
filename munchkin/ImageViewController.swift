@@ -57,7 +57,7 @@ class ImageViewController: UIViewController {
         instagramButton.layer.shadowRadius = 10;
         instagramButton.layer.shadowOffset = CGSizeMake(-2, 2)
         imagecontainerbackground.layer.cornerRadius = 10
-
+        
     }
     
     func firstTimeUser() {
@@ -87,11 +87,12 @@ class ImageViewController: UIViewController {
         } else {
             WelcomeTour.hidden = true
             codenameTitle.hidden = true
+            instagramButton.hidden = true
             
             return true
         }
     }
-
+    
     func getDate() -> NSDate {
         let defaults = NSUserDefaults.standardUserDefaults()
         let dueDate = defaults.objectForKey("DueDate")
@@ -102,7 +103,7 @@ class ImageViewController: UIViewController {
         } else {
             return dueDate as! NSDate
         }
-
+        
     }
     func findWeek() {
         let dueDate = getDate()
@@ -112,9 +113,16 @@ class ImageViewController: UIViewController {
             // dueDate < today
             let weeks = dueDate.timeIntervalSinceDate(today)/604800
             let weeksLeft = Int(ceil(weeks))
-            weekNumber.text = "Your baby is in week \( 40 - weeksLeft )"
-            weeklyImage.image = UIImage(named: "\(String(weeksLeft))")
-            comparisonText.text = "\(data[weeksLeft].comparison)"
+            if weeksLeft > 32 {
+                staticComapreText.hidden = true
+                weekNumber.text = " Your munchkin is too small to compare with anything"
+                comparisonText.text = "Check back in \(weeksLeft - 33) weeks"
+                weeklyImage.image = UIImage(named: "small")
+            } else {
+                weekNumber.text = "Your munchkin has been brewing for  \( 40 - weeksLeft ) weeks"
+                weeklyImage.image = UIImage(named: "\(String(weeksLeft))")
+                comparisonText.text = "\(data[weeksLeft].comparison)"
+            }
         } else {
             let weeks = today.timeIntervalSinceDate(dueDate)/604800
             let weeksLeft = Int(floor(weeks))
@@ -125,18 +133,18 @@ class ImageViewController: UIViewController {
                 staticComapreText.hidden = true
                 comparisonText.text = "It is the size of \(data[weeksLeft].comparison)"
             } else {
-                weekNumber.text = "Your baby is in week \( weeksOver )"
+                weekNumber.text = "Your munchkin has been brewing for \( weeksOver ) weeks"
                 weeklyImage.image = UIImage(named: "\(String(weeksOver ))")
                 comparisonText.text = "\(data[weeksOver].comparison)"
             }
         }
     }
-
+    
     @IBAction func shareInstagram(sender: AnyObject) {
         print("button clicked")
-
+        
     }
-
+    
     @IBAction func settingsClick(sender: AnyObject) {
     }
     
@@ -194,12 +202,12 @@ class ImageViewController: UIViewController {
     
     /*
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // Get the new view controller using segue.destinationViewController.
+    // Pass the selected object to the new view controller.
     }
     */
-
+    
 }

@@ -13,6 +13,7 @@ class SecondViewController: UIViewController {
     let defaults = NSUserDefaults.standardUserDefaults()
     var dueDate: String = ""
     var dueDateFromPicker = NSDate()
+    let formatter = NSDateFormatter()
     @IBOutlet weak var dueDateLabel: UILabel!
     @IBOutlet weak var setDateButton: UIButton!
     @IBOutlet weak var dueDateSelector: UIDatePicker!
@@ -45,6 +46,10 @@ class SecondViewController: UIViewController {
         dueDateLabel.hidden = false
         setDateButton.hidden = true
         confirmDateButton.hidden = false
+        let savedDueDate = defaults.objectForKey("DueDate") as! NSDate
+        dueDateSelector.setDate(savedDueDate, animated: true)
+        formatter.dateStyle = NSDateFormatterStyle.LongStyle
+        dueDateLabel.text = "Due date: \(formatter.stringFromDate(savedDueDate))"
     }
     
     
@@ -55,7 +60,6 @@ class SecondViewController: UIViewController {
         datePicker.minimumDate = NSDate()
         datePicker.maximumDate = fourtyWeeks
         setDateButton.hidden = true
-        let formatter = NSDateFormatter()
         formatter.dateStyle = NSDateFormatterStyle.LongStyle
         dueDateFromPicker = datePicker.date
         dueDate = formatter.stringFromDate(dueDateFromPicker)
