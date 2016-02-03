@@ -19,6 +19,8 @@ class ImageViewController: UIViewController {
     @IBOutlet weak var weekNumber: UILabel!
     @IBOutlet weak var staticComapreText: UILabel!
     @IBOutlet weak var backgroundColor: UIImageView!
+    @IBOutlet weak var imagecontainerbackground: UIImageView!
+    
     var editDate: Bool!
     
     @IBAction func welcomeTour(sender: AnyObject) {
@@ -37,19 +39,25 @@ class ImageViewController: UIViewController {
         let rgb: CGColorSpaceRef = CGColorSpaceCreateDeviceRGB()!
         let black: [CGFloat]   = [240, 237, 187, 0.2]
         settings.setTitle("\u{2699}", forState: .Normal)
-        instagramButton.layer.cornerRadius = 5
-        settings.layer.cornerRadius = 5
+        settings.layer.cornerRadius = 10
         settings.layer.shadowOpacity = 1
         settings.layer.shadowColor = CGColorCreate(rgb, black)
         settings.layer.shadowRadius = 5
         settings.layer.shadowOffset = CGSizeMake(-2, 2)
-        weeklyImage.layer.cornerRadius = 5
-        WelcomeTour.layer.cornerRadius = 5
-        backgroundColor.layer.cornerRadius = 5
+        WelcomeTour.layer.cornerRadius = 10
+        weeklyImage.layer.cornerRadius = 10
+        backgroundColor.layer.borderWidth = 2
+        backgroundColor.layer.borderColor = UIColor(red:154/255.0, green:154/255.0, blue:147/255.0, alpha: 1.0).CGColor
+        imagecontainerbackground.layer.borderWidth = 2
+        imagecontainerbackground.layer.borderColor = UIColor(red:154/255.0, green:154/255.0, blue:147/255.0, alpha: 1.0).CGColor
+        backgroundColor.layer.cornerRadius = 10
+        instagramButton.layer.cornerRadius = 5
         instagramButton.layer.shadowColor = CGColorCreate(rgb, black)
         instagramButton.layer.shadowOpacity = 1;
-        instagramButton.layer.shadowRadius = 5;
+        instagramButton.layer.shadowRadius = 10;
         instagramButton.layer.shadowOffset = CGSizeMake(-2, 2)
+        imagecontainerbackground.layer.cornerRadius = 10
+        
     }
     
     func firstTimeUser() {
@@ -74,14 +82,17 @@ class ImageViewController: UIViewController {
             staticComapreText.hidden = true
             instagramButton.hidden = true
             weeklyImage.hidden = true
+            imagecontainerbackground.hidden = true
             return false
         } else {
             WelcomeTour.hidden = true
             codenameTitle.hidden = true
+            instagramButton.hidden = true
+            
             return true
         }
     }
-
+    
     func getDate() -> NSDate {
         let defaults = NSUserDefaults.standardUserDefaults()
         let dueDate = defaults.objectForKey("DueDate")
@@ -92,7 +103,7 @@ class ImageViewController: UIViewController {
         } else {
             return dueDate as! NSDate
         }
-
+        
     }
     func findWeek() {
         let dueDate = getDate()
@@ -102,37 +113,38 @@ class ImageViewController: UIViewController {
             // dueDate < today
             let weeks = dueDate.timeIntervalSinceDate(today)/604800
             let weeksLeft = Int(ceil(weeks))
-            print("weeks \(weeks)")
-            print("days left is \(dueDate.timeIntervalSinceDate(today)/86400)")
-            print("weeksLeft \(weeksLeft), due date \(dueDate)")
-            weekNumber.text = "Your baby is in week \( 40 - weeksLeft )"
-            weeklyImage.image = UIImage(named: "\(String(weeksLeft))")
-            comparisonText.text = "\(data[weeksLeft].comparison)"
+            if weeksLeft > 32 {
+                staticComapreText.hidden = true
+                weekNumber.text = " Your munchkin is too small to compare with anything"
+                comparisonText.text = "Check back in \(weeksLeft - 33) weeks"
+                weeklyImage.image = UIImage(named: "small")
+            } else {
+                weekNumber.text = "Your munchkin has been brewing for  \( 40 - weeksLeft ) weeks"
+                weeklyImage.image = UIImage(named: "\(String(weeksLeft))")
+                comparisonText.text = "\(data[weeksLeft].comparison)"
+            }
         } else {
             let weeks = today.timeIntervalSinceDate(dueDate)/604800
             let weeksLeft = Int(floor(weeks))
             let weeksOver = weeksLeft + 40
-            print(weeksOver)
-            print("else days left is \(today.timeIntervalSinceDate(dueDate)/86400)")
-            print("else weeks \(weeks)")
-            print("else weeksLeft \(weeksOver), due date \(dueDate)")
             if (weeksLeft == 0) {
                 weekNumber.text = "Your baby is due this week!"
                 weeklyImage.image = UIImage(named: "\(String(weeksLeft ))")
                 staticComapreText.hidden = true
                 comparisonText.text = "It is the size of \(data[weeksLeft].comparison)"
             } else {
-                weekNumber.text = "Your baby is in week \( weeksOver )"
+                weekNumber.text = "Your munchkin has been brewing for \( weeksOver ) weeks"
                 weeklyImage.image = UIImage(named: "\(String(weeksOver ))")
                 comparisonText.text = "\(data[weeksOver].comparison)"
             }
         }
     }
-
+    
     @IBAction func shareInstagram(sender: AnyObject) {
         print("button clicked")
+        
     }
-
+    
     @IBAction func settingsClick(sender: AnyObject) {
     }
     
@@ -146,7 +158,7 @@ class ImageViewController: UIViewController {
         (week: "40", length: "20.16 inches", weight: "7.63 pounds", comparison: "a rack of ribs"),
         (week: "39", length: "19.96 inches", weight: "7.25 pounds", comparison: "a bucket of fried chicken"),
         (week: "38", length: "19.61 inches", weight: "6.80 pounds", comparison: "Indy's fedora"),
-        (week: "37", length: "19.13 inches", weight: "6.30 pounds", comparison: "a size 10 shoe"),
+        (week: "37", length: "19.13 inches", weight: "6.30 pounds", comparison: "a toolbox"),
         (week: "36", length: "18.66 inches", weight: "5.78 pounds", comparison: "the diameter of a rim"),
         (week: "35", length: "18.19 inches", weight: "5.25 pounds", comparison: "a mid-sized crowbar"),
         (week: "34", length: "17.72 inches", weight: "4.73 pounds", comparison: "a baseball glove"),
@@ -174,7 +186,7 @@ class ImageViewController: UIViewController {
         (week: "12", length: "2.13 inches",	weight: "0.49 ounce", comparison: "a shot glass"),
         (week: "11", length: "1.61 inch",	weight: "0.25 ounce", comparison: "a Lego mini figure"),
         (week: "10", length: "1.22 inch",	weight: "0.14 ounce", comparison: "a poker chip"),
-        (week: "9", length: "0.90 inch", weight: "0.07 ounce", comparison: "a lugnut"),
+        (week: "9", length: "0.90 inch", weight: "0.07 ounce", comparison: "a standard nut"),
         (week: "8", length: "0.63 inch", weight: "0.04 ounce", comparison: "a cufflink"),
         (week: "7", length: "N/A",	weight: "N/A", comparison: ""),
         (week: "6", length: "N/A",	weight: "N/A", comparison: ""),
@@ -190,12 +202,12 @@ class ImageViewController: UIViewController {
     
     /*
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // Get the new view controller using segue.destinationViewController.
+    // Pass the selected object to the new view controller.
     }
     */
-
+    
 }

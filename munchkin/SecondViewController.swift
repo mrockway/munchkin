@@ -13,14 +13,16 @@ class SecondViewController: UIViewController {
     let defaults = NSUserDefaults.standardUserDefaults()
     var dueDate: String = ""
     var dueDateFromPicker = NSDate()
+    let formatter = NSDateFormatter()
     @IBOutlet weak var dueDateLabel: UILabel!
     @IBOutlet weak var setDateButton: UIButton!
     @IBOutlet weak var dueDateSelector: UIDatePicker!
     @IBOutlet weak var confirmDateButton: UIButton!
     @IBOutlet weak var enterDateLabel: UILabel!
-
-    
     @IBOutlet weak var cancelButton: UIButton!
+    @IBOutlet weak var datePickerContainer: UIImageView!
+    @IBOutlet weak var selectDateDescription: UILabel!
+    @IBOutlet weak var dueDateBackgroundLabel: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +30,11 @@ class SecondViewController: UIViewController {
         confirmDateButton.hidden = true
         setDateButton.hidden = false
         dueDateLabel.hidden = true
-        
+        setDateButton.layer.cornerRadius = 5
+        confirmDateButton.layer.cornerRadius = 5
+        cancelButton.layer.cornerRadius = 5
+        datePickerContainer.layer.cornerRadius = 10
+        dueDateBackgroundLabel.layer.cornerRadius = 10
         
         
         // Do any additional setup after loading the view.
@@ -40,29 +46,36 @@ class SecondViewController: UIViewController {
         dueDateLabel.hidden = false
         setDateButton.hidden = true
         confirmDateButton.hidden = false
+        let savedDueDate = defaults.objectForKey("DueDate") as! NSDate
+        dueDateSelector.setDate(savedDueDate, animated: true)
+        formatter.dateStyle = NSDateFormatterStyle.LongStyle
+        dueDateLabel.text = "Due date: \(formatter.stringFromDate(savedDueDate))"
     }
+    
+    
     
     // Set the due date 
     func datePickerChanged(datePicker:UIDatePicker) {
+        let fourtyWeeks = NSDate(timeInterval: (24192000), sinceDate: NSDate())
         datePicker.minimumDate = NSDate()
+        datePicker.maximumDate = fourtyWeeks
         setDateButton.hidden = true
-        let formatter = NSDateFormatter()
         formatter.dateStyle = NSDateFormatterStyle.LongStyle
         dueDateFromPicker = datePicker.date
         dueDate = formatter.stringFromDate(dueDateFromPicker)
         dueDateLabel.text = "Due Date: \(dueDate)"
-        defaults.setObject(dueDateFromPicker, forKey: "DueDate")
-        defaults.setBool(true, forKey: "returningUser")
     }
     
     @IBAction func confirmDueDate() {
         if (dueDate == "") {
             let alert = UIAlertController(title: "Please enter the due date", message: "No never ending pregnancies allowed", preferredStyle: UIAlertControllerStyle.Alert)
-            alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil))
+            alert.addAction(UIAlertAction(title: "Try again", style: UIAlertActionStyle.Default, handler: nil))
             self.presentViewController(alert, animated: true, completion: nil)
         } else {
             dueDateSelector.hidden = true
             confirmDateButton.hidden = true
+            defaults.setObject(dueDateFromPicker, forKey: "DueDate")
+            defaults.setBool(true, forKey: "returningUser")
             scheduleNofifications()
         }
         
