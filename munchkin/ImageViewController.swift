@@ -10,6 +10,7 @@ import UIKit
 
 class ImageViewController: UIViewController {
     
+    // declare variables
     @IBOutlet weak var instagramButton: UIButton!
     @IBOutlet weak var settings: UIButton!
     @IBOutlet weak var codenameTitle: UIImageView!
@@ -21,10 +22,11 @@ class ImageViewController: UIViewController {
     @IBOutlet weak var backgroundColor: UIImageView!
     @IBOutlet weak var imagecontainerbackground: UIImageView!
     
+    // variable to check if user has set a due date
     var editDate: Bool!
     
+    // segue to preform welcome tour
     @IBAction func welcomeTour(sender: AnyObject) {
-        
     }
     
     override func viewDidLoad() {
@@ -36,29 +38,41 @@ class ImageViewController: UIViewController {
     }
     
     func setAttributes() {
+        
+        // shadow attributes
         let rgb: CGColorSpaceRef = CGColorSpaceCreateDeviceRGB()!
         let black: [CGFloat]   = [0, 0, 0, 1]
+        
+        // border color
+        let borderColor = UIColor(red:154/255.0, green:154/255.0, blue:147/255.0, alpha: 1.0).CGColor
+        // gear button for settings page
         settings.setTitle("\u{2699}", forState: .Normal)
         settings.layer.cornerRadius = 10
+        
+        // get started button
         WelcomeTour.layer.cornerRadius = 10
         weeklyImage.layer.cornerRadius = 10
+        
+        // styling for lower half of image screen
         backgroundColor.layer.borderWidth = 5
-        backgroundColor.layer.borderColor = UIColor(red:154/255.0, green:154/255.0, blue:147/255.0, alpha: 1.0).CGColor
+        backgroundColor.layer.borderColor = borderColor
         backgroundColor.layer.cornerRadius = 10
         backgroundColor.layer.shadowRadius = 5
         backgroundColor.layer.shadowColor = CGColorCreate(rgb, black)
         backgroundColor.layer.shadowOpacity = 1
         backgroundColor.layer.shadowOffset = CGSizeMake(-2,2)
         
-        
+        // instagram button styling
         instagramButton.layer.cornerRadius = 5
         instagramButton.layer.shadowColor = CGColorCreate(rgb, black)
         instagramButton.layer.shadowOpacity = 1;
         instagramButton.layer.shadowRadius = 10;
         instagramButton.layer.shadowOffset = CGSizeMake(-2, 2)
+        
+        // styling for upper half of screen
         imagecontainerbackground.layer.cornerRadius = 10
         imagecontainerbackground.layer.borderWidth = 5
-        imagecontainerbackground.layer.borderColor = UIColor(red:154/255.0, green:154/255.0, blue:147/255.0, alpha: 1.0).CGColor
+        imagecontainerbackground.layer.borderColor = borderColor
         imagecontainerbackground.layer.shadowRadius = 5
         imagecontainerbackground.layer.shadowColor = CGColorCreate(rgb, black)
         imagecontainerbackground.layer.shadowOpacity = 1
@@ -66,6 +80,7 @@ class ImageViewController: UIViewController {
         
     }
     
+    // checks for boolean to determine if user has set due date and show welcome tour if false and image view if true
     func firstTimeUser() {
         let skipWelcome = getUserSettings()
         if (skipWelcome == true) {
@@ -76,6 +91,7 @@ class ImageViewController: UIViewController {
         }
     }
     
+    // show and hide elements depending on return user being true or false
     func getUserSettings() -> Bool {
         let defaults = NSUserDefaults.standardUserDefaults()
         let returningUser = defaults.boolForKey("returningUser")
@@ -99,6 +115,7 @@ class ImageViewController: UIViewController {
         }
     }
     
+    // get due date from storage
     func getDate() -> NSDate {
         let defaults = NSUserDefaults.standardUserDefaults()
         let dueDate = defaults.objectForKey("DueDate")
@@ -111,6 +128,8 @@ class ImageViewController: UIViewController {
         }
         
     }
+    
+    // figure out week of pregnancy and show appropriate image
     func findWeek() {
         let dueDate = getDate()
         let today = NSDate()
@@ -149,6 +168,7 @@ class ImageViewController: UIViewController {
     @IBAction func shareInstagram(sender: AnyObject) {
     }
     
+    // segue to bring up date select view
     @IBAction func settingsClick(sender: AnyObject) {
     }
     
@@ -157,10 +177,12 @@ class ImageViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // set up phone to handle motion events
     override func canBecomeFirstResponder() -> Bool {
         return true
     }
     
+    // On shake event the phone displays a helpful message
     override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
         if motion == .MotionShake {
             let ac = UIAlertController(title: "Careful", message: "Dont't shake the baby!", preferredStyle: .Alert)
