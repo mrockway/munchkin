@@ -37,14 +37,31 @@ class SecondViewController: UIViewController {
         } else {
             dueDateStatic.hidden = true
         }
+        setStyleAttributes()
+        // Do any additional setup after loading the view.
+    }
+    
+    func setStyleAttributes() {
+        let rgb: CGColorSpaceRef = CGColorSpaceCreateDeviceRGB()!
+        let black: [CGFloat]   = [0, 0, 0, 1]
         setDateButton.layer.cornerRadius = 5
         confirmDateButton.layer.cornerRadius = 5
         cancelButton.layer.cornerRadius = 5
+        datePickerContainer.layer.borderWidth = 5
+        datePickerContainer.layer.borderColor = UIColor(red:154/255.0, green:154/255.0, blue:147/255.0, alpha: 1.0).CGColor
         datePickerContainer.layer.cornerRadius = 10
+        datePickerContainer.layer.shadowRadius = 5
+        datePickerContainer.layer.shadowColor = CGColorCreate(rgb, black)
+        datePickerContainer.layer.shadowOpacity = 1
+        datePickerContainer.layer.shadowOffset = CGSizeMake(-2,2)        
+        dueDateBackgroundLabel.layer.borderWidth = 5
+        dueDateBackgroundLabel.layer.borderColor = UIColor(red:154/255.0, green:154/255.0, blue:147/255.0, alpha: 1.0).CGColor
         dueDateBackgroundLabel.layer.cornerRadius = 10
+        dueDateBackgroundLabel.layer.shadowRadius = 5
+        dueDateBackgroundLabel.layer.shadowColor = CGColorCreate(rgb, black)
+        dueDateBackgroundLabel.layer.shadowOpacity = 1
+        dueDateBackgroundLabel.layer.shadowOffset = CGSizeMake(-2,2)
         
-        
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func setInitialDate() {
@@ -125,7 +142,6 @@ class SecondViewController: UIViewController {
     func repeatNotifications() -> Int {
         let weeks = dueDateFromPicker.timeIntervalSinceDate(NSDate())/604800
         let weeksLeft = Int(ceil(weeks))
-        print("weeks left \(weeksLeft)")
         return weeksLeft
     }
     
@@ -139,6 +155,18 @@ class SecondViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func canBecomeFirstResponder() -> Bool {
+        return true
+    }
+    
+    override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
+        if motion == .MotionShake {
+            let ac = UIAlertController(title: "Careful", message: "Dont't shake the baby!", preferredStyle: .Alert)
+            ac.addAction(UIAlertAction(title: "You have been warned", style: .Default, handler: nil))
+            presentViewController(ac, animated: true, completion: nil)
+            return
+        }
+    }
 
     /*
     // MARK: - Navigation
