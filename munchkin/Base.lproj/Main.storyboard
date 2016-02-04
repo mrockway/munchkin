@@ -120,7 +120,7 @@
                                 </variation>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Due Date:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NAP-PS-WoB">
-                                <rect key="frame" x="39" y="274" width="336" height="23.5"/>
+                                <rect key="frame" x="39" y="301.5" width="336" height="23.5"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="20"/>
                                 <color key="textColor" red="1" green="0.99607843139999996" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -142,7 +142,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uTx-UQ-HfL">
                                 <rect key="frame" x="356" y="20" width="37.5" height="30"/>
-                                <color key="backgroundColor" red="0.3294117647" green="0.81568627449999997" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.60392156862745094" green="0.60392156862745094" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="15"/>
                                 <state key="normal" title=" X ">
                                     <color key="titleColor" red="1" green="0.99607843139999996" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -175,7 +175,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i0m-7L-k74">
-                                <rect key="frame" x="39" y="296" width="336" height="44"/>
+                                <rect key="frame" x="39" y="323.5" width="336" height="44"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="20"/>
                                 <color key="textColor" red="1" green="0.99607843139999996" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -215,7 +215,7 @@
                             <constraint firstItem="NAP-PS-WoB" firstAttribute="width" secondItem="FKG-8W-Fn0" secondAttribute="width" multiplier="0.9" id="nG2-Ax-38x"/>
                             <constraint firstItem="9sv-X1-x1A" firstAttribute="centerY" secondItem="cf4-cX-zzL" secondAttribute="centerY" id="pfU-yt-qfb"/>
                             <constraint firstItem="FF4-ey-A61" firstAttribute="height" secondItem="FKG-8W-Fn0" secondAttribute="height" multiplier="0.2" id="pv8-KC-dve"/>
-                            <constraint firstItem="NAP-PS-WoB" firstAttribute="top" secondItem="FKG-8W-Fn0" secondAttribute="top" id="q9P-5N-HpI"/>
+                            <constraint firstItem="NAP-PS-WoB" firstAttribute="top" secondItem="FKG-8W-Fn0" secondAttribute="top" multiplier="1.1" id="q9P-5N-HpI"/>
                             <constraint firstItem="FF4-ey-A61" firstAttribute="centerY" secondItem="FKG-8W-Fn0" secondAttribute="centerY" id="sE4-Cw-VYj"/>
                             <constraint firstItem="OK4-4F-fiV" firstAttribute="height" secondItem="FKG-8W-Fn0" secondAttribute="height" multiplier="0.1" id="v9J-o6-1Qk"/>
                             <constraint firstItem="OK4-4F-fiV" firstAttribute="centerX" secondItem="FKG-8W-Fn0" secondAttribute="centerX" id="wJH-Pi-KK1"/>
@@ -405,7 +405,7 @@
         <image name="codename-title" width="423" height="278"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="YLK-k6-N49"/>
         <segue reference="SKw-CP-fd3"/>
+        <segue reference="YLK-k6-N49"/>
     </inferredMetricsTieBreakers>
 </document>

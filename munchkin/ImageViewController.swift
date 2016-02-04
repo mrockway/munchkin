@@ -145,10 +145,8 @@ class ImageViewController: UIViewController {
             }
         }
     }
-    
+    // Button to share to instagram, not being utilized
     @IBAction func shareInstagram(sender: AnyObject) {
-        print("button clicked")
-        
     }
     
     @IBAction func settingsClick(sender: AnyObject) {
@@ -157,6 +155,19 @@ class ImageViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func canBecomeFirstResponder() -> Bool {
+        return true
+    }
+    
+    override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
+        if motion == .MotionShake {
+            let ac = UIAlertController(title: "Careful", message: "Dont't shake the baby!", preferredStyle: .Alert)
+            ac.addAction(UIAlertAction(title: "You have been warned", style: .Default, handler: nil))
+            presentViewController(ac, animated: true, completion: nil)
+            return
+        }
     }
     
     // Fetal growth data and comparisons
