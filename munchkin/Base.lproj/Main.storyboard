@@ -151,7 +151,7 @@
                                     <segue destination="uM1-l6-4g6" kind="show" id="SKw-CP-fd3"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter the Munchkin's due date.  Can't remember? It's OK for now to ask your lady." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9sv-X1-x1A">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter the Munchkin's due date.  Can't remember? It's OK to ask your lady." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9sv-X1-x1A">
                                 <rect key="frame" x="21" y="20" width="373" height="221"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="25"/>
                                 <color key="textColor" red="1" green="0.99607843139999996" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -161,7 +161,7 @@
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FF4-ey-A61">
-                                <rect key="frame" x="114" y="450.5" width="186.5" height="88.5"/>
+                                <rect key="frame" x="76.5" y="450.5" width="261.5" height="88.5"/>
                                 <color key="backgroundColor" red="0.3294117647" green="0.81568627449999997" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="25"/>
                                 <state key="normal" title="Set Due Date">
@@ -219,7 +219,7 @@
                             <constraint firstItem="FF4-ey-A61" firstAttribute="centerY" secondItem="FKG-8W-Fn0" secondAttribute="centerY" id="sE4-Cw-VYj"/>
                             <constraint firstItem="OK4-4F-fiV" firstAttribute="height" secondItem="FKG-8W-Fn0" secondAttribute="height" multiplier="0.1" id="v9J-o6-1Qk"/>
                             <constraint firstItem="OK4-4F-fiV" firstAttribute="centerX" secondItem="FKG-8W-Fn0" secondAttribute="centerX" id="wJH-Pi-KK1"/>
-                            <constraint firstItem="FF4-ey-A61" firstAttribute="width" secondItem="FKG-8W-Fn0" secondAttribute="width" multiplier="0.5" id="wil-yU-fac"/>
+                            <constraint firstItem="FF4-ey-A61" firstAttribute="width" secondItem="FKG-8W-Fn0" secondAttribute="width" multiplier="0.7" id="wil-yU-fac"/>
                         </constraints>
                         <variation key="heightClass=regular">
                             <mask key="subviews">

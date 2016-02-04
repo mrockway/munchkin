@@ -37,26 +37,32 @@ class ImageViewController: UIViewController {
     
     func setAttributes() {
         let rgb: CGColorSpaceRef = CGColorSpaceCreateDeviceRGB()!
-        let black: [CGFloat]   = [240, 237, 187, 0.2]
+        let black: [CGFloat]   = [0, 0, 0, 1]
         settings.setTitle("\u{2699}", forState: .Normal)
         settings.layer.cornerRadius = 10
-        settings.layer.shadowOpacity = 1
-        settings.layer.shadowColor = CGColorCreate(rgb, black)
-        settings.layer.shadowRadius = 5
-        settings.layer.shadowOffset = CGSizeMake(-2, 2)
         WelcomeTour.layer.cornerRadius = 10
         weeklyImage.layer.cornerRadius = 10
-        backgroundColor.layer.borderWidth = 2
+        backgroundColor.layer.borderWidth = 5
         backgroundColor.layer.borderColor = UIColor(red:154/255.0, green:154/255.0, blue:147/255.0, alpha: 1.0).CGColor
-        imagecontainerbackground.layer.borderWidth = 2
-        imagecontainerbackground.layer.borderColor = UIColor(red:154/255.0, green:154/255.0, blue:147/255.0, alpha: 1.0).CGColor
         backgroundColor.layer.cornerRadius = 10
+        backgroundColor.layer.shadowRadius = 5
+        backgroundColor.layer.shadowColor = CGColorCreate(rgb, black)
+        backgroundColor.layer.shadowOpacity = 1
+        backgroundColor.layer.shadowOffset = CGSizeMake(-2,2)
+        
+        
         instagramButton.layer.cornerRadius = 5
         instagramButton.layer.shadowColor = CGColorCreate(rgb, black)
         instagramButton.layer.shadowOpacity = 1;
         instagramButton.layer.shadowRadius = 10;
         instagramButton.layer.shadowOffset = CGSizeMake(-2, 2)
         imagecontainerbackground.layer.cornerRadius = 10
+        imagecontainerbackground.layer.borderWidth = 5
+        imagecontainerbackground.layer.borderColor = UIColor(red:154/255.0, green:154/255.0, blue:147/255.0, alpha: 1.0).CGColor
+        imagecontainerbackground.layer.shadowRadius = 5
+        imagecontainerbackground.layer.shadowColor = CGColorCreate(rgb, black)
+        imagecontainerbackground.layer.shadowOpacity = 1
+        imagecontainerbackground.layer.shadowOffset = CGSizeMake(-2,2)
         
     }
     
