@@ -1,7 +1,7 @@
 #Codename: Munchkin 
 
 ##Description
-A comparison of your Munchkin's fetal growth to manly objects.  This will give future fathers a rough idea of how big their baby really is.
+Codename: Munchkin is a app that compares the size of an unborn baby to objects that people, namely men, can relate to.
 
 ##App Availability
 A version will appear on the App Store once it has been tested
