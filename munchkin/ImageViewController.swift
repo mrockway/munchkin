@@ -49,8 +49,7 @@ class ImageViewController: UIViewController {
         settings.setTitle("\u{2699}", forState: .Normal)
         settings.layer.cornerRadius = 10
         
-        // get started button
-        WelcomeTour.layer.cornerRadius = 10
+        // weekyl image rounding corners
         weeklyImage.layer.cornerRadius = 10
         
         // styling for lower half of image screen
@@ -77,6 +76,15 @@ class ImageViewController: UIViewController {
         imagecontainerbackground.layer.shadowColor = CGColorCreate(rgb, black)
         imagecontainerbackground.layer.shadowOpacity = 1
         imagecontainerbackground.layer.shadowOffset = CGSizeMake(-2,2)
+        
+        // styling for get started button
+        WelcomeTour.layer.cornerRadius = 10
+        WelcomeTour.layer.borderWidth = 5
+        WelcomeTour.layer.borderColor = borderColor
+        WelcomeTour.layer.shadowRadius = 5
+        WelcomeTour.layer.shadowColor = CGColorCreate(rgb, black)
+        WelcomeTour.layer.shadowOpacity = 1
+        WelcomeTour.layer.shadowOffset = CGSizeMake(-2,2)
         
     }
     
