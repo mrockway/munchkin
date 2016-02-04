@@ -23,13 +23,20 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var datePickerContainer: UIImageView!
     @IBOutlet weak var selectDateDescription: UILabel!
     @IBOutlet weak var dueDateBackgroundLabel: UIImageView!
+    @IBOutlet weak var dueDateStatic: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         dueDateSelector.hidden = true
         confirmDateButton.hidden = true
         setDateButton.hidden = false
-        dueDateLabel.hidden = true
+        if let savedDueDate = defaults.objectForKey("DueDate") {
+            dueDateSelector.setDate(savedDueDate as! NSDate, animated: true)
+            formatter.dateStyle = NSDateFormatterStyle.LongStyle
+            dueDateLabel.text = "\(formatter.stringFromDate(savedDueDate as! NSDate))"
+        } else {
+            dueDateStatic.hidden = true
+        }
         setDateButton.layer.cornerRadius = 5
         confirmDateButton.layer.cornerRadius = 5
         cancelButton.layer.cornerRadius = 5
@@ -49,7 +56,7 @@ class SecondViewController: UIViewController {
         if let savedDueDate = defaults.objectForKey("DueDate") {
             dueDateSelector.setDate(savedDueDate as! NSDate, animated: true)
             formatter.dateStyle = NSDateFormatterStyle.LongStyle
-            dueDateLabel.text = "Due date: \(formatter.stringFromDate(savedDueDate as! NSDate))"
+            dueDateLabel.text = "\(formatter.stringFromDate(savedDueDate as! NSDate))"
         }
     }
     
@@ -64,7 +71,7 @@ class SecondViewController: UIViewController {
         formatter.dateStyle = NSDateFormatterStyle.LongStyle
         dueDateFromPicker = datePicker.date
         dueDate = formatter.stringFromDate(dueDateFromPicker)
-        dueDateLabel.text = "Due Date: \(dueDate)"
+        dueDateLabel.text = "\(dueDate)"
     }
     
     @IBAction func confirmDueDate() {
