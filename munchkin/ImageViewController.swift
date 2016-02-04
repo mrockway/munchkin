@@ -119,7 +119,7 @@ class ImageViewController: UIViewController {
                 comparisonText.text = "Check back in \(weeksLeft - 33) weeks"
                 weeklyImage.image = UIImage(named: "small")
             } else {
-                weekNumber.text = "Your munchkin has been brewing for  \( 40 - weeksLeft ) weeks"
+                weekNumber.text = "Your munchkin has been brewing for \(40 - weeksLeft) weeks"
                 weeklyImage.image = UIImage(named: "\(String(weeksLeft))")
                 comparisonText.text = "\(data[weeksLeft].comparison)"
             }
